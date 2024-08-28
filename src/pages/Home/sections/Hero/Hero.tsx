@@ -25,7 +25,7 @@ const Hero = () => {
 
 
   const StyledImage = styled("img")(() => ({
-    width: "85%",
+    width: "75%",
     borderRadius: "70%"
   }))
 
@@ -56,14 +56,14 @@ const Hero = () => {
               <Grid2 container display={"flex"} justifyContent={"center"} spacing={3} pt={3}>
 
                 <Grid2 size={{ xs: 12, md: 4}} display={"flex"} justifyContent={"center"}>                  
-                    <StyledButton>
+                    <StyledButton onClick={()=> console.log("download")}>
                       <CloudDownloadIcon/>  
                        <Typography>Download CV</Typography>
                     </StyledButton>
                 </Grid2>
 
                 <Grid2 size={{ xs: 12, md: 4}} display={"flex"} justifyContent={"center"}>
-                  <StyledButton>
+                  <StyledButton onClick={()=> console.log("contact")}>
                     <MarkEmailReadIcon/>
                     <Typography>Contact me</Typography>
                   </StyledButton>
