@@ -4,6 +4,7 @@ import CloudDownloadIcon from '@mui/icons-material/CloudDownload';
 import MarkEmailReadIcon from '@mui/icons-material/MarkEmailRead';
 import StyledButton from "../../../../components/StyledButton/StyledButton";
 import { AnimatedBackground } from "../../../../components/AnimatedBackground/AnimatedBackground";
+import { Padding } from "@mui/icons-material";
 
 const Hero = () => {
 
@@ -11,7 +12,15 @@ const Hero = () => {
     backgroundColor: theme.palette.primary.main,
     height: "100vh",
     display: "flex",
-    alignItems:"center"
+    alignItems:"center",
+    [theme.breakpoints.up('xs')]:{
+  
+      paddingTop: "100px",
+    },
+    [theme.breakpoints.up('md')]:{
+    
+      paddingTop: "0",
+    }
   }))
 
 
