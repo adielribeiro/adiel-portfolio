@@ -37,19 +37,19 @@ const About = () => {
                             </Typography>
                             <Grid2 container>
                                 <Typography color="primary.contrastText" variant="subtitle1" justifyContent={"center"}  >
-                                    <Typography fontSize={"17px"} paddingTop={"5px"}>
-                                        Me siga na redes sociais
+                                    <Typography fontSize={"19px"} paddingTop={"5px"} >
+                                        Me siga na redes sociais:
                                     </Typography>
                                     <Grid2 display={"flex"} gap={"15px"} fontSize={"20px"} textAlign={"right"} paddingTop={"8px"}>
                                         <IconContext.Provider value={{ color: "white" }}>
                                             <a href="https://www.linkedin.com/in/adiel-ribeiro-do-vale-j%C3%BAnior-b5094574/" color="disable" >
-                                                <FaLinkedinIn />
+                                                <FaLinkedinIn cursor={"pointer"} size={"25px"} />
                                             </a>
                                             <a href="https://github.com/adielribeiro">
-                                                <FaGithub cursor={"pointer"} />
+                                                <FaGithub cursor={"pointer"} size={"25px"}  />
                                             </a>
                                             <a href="https://www.instagram.com/junior.do.vale/">
-                                                <FaInstagram cursor={"pointer"} />
+                                                <FaInstagram cursor={"pointer"} size={"25px"} />
                                             </a>
                                         </IconContext.Provider>
                                     </Grid2>
