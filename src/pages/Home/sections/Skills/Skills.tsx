@@ -28,12 +28,9 @@ const Skills = () => {
 
     }))
 
-    
-
 
     return (
         <>
-            
             <StyledSkills>
                 <Container>
                     <Grid2>
@@ -41,30 +38,41 @@ const Skills = () => {
                             Minhas principais Skills!
                         </Typography>
                     </Grid2>
-                    <Grid2 container columns={{ xs: 3, md: 3 }} maxWidth={"1200px"} maxHeight={"100%"} flexWrap={"wrap"} zIndex={1}>
+                    <Grid2 container columns={{ xs: 3, md: 3 }} maxWidth={"1200px"} maxHeight={"100%"} flexWrap={"wrap"}>
                         <StyledBox>
-                            <StyledTypography>
-                                <Grid2 container justifyContent={"center"}><h1>BPMS</h1></Grid2>
-                                <h4>Desenvolvimento de processos utlizando ferramentas como a SoftExpert para o criação de Formulários e WorkFlows automatizandos e com integrações.</h4>
-                            </StyledTypography>
-                        </StyledBox>
-
-                        <StyledBox>
-                            <StyledTypography >
-                            <Grid2 container justifyContent={"center"}><h1>Back-End</h1></Grid2>
-                                <h4>Desenvolvimento de APIs para a utilzação em processos de integração, usando como base linguagem C#, EntytiFramework e SQL</h4>
-                            </StyledTypography>
+                            <Grid2 container justifyContent={"center"} >
+                                <Typography color="primary.contrastText" paddingBottom={"10px"} align="center" fontSize={"30px"}>
+                                    BPMS
+                                </Typography>
+                                <StyledTypography>
+                                    Desenvolvimento de processos utlizando ferramentas como a SoftExpert para o criação de Formulários e WorkFlows automatizandos e com integrações.
+                                </StyledTypography>
+                            </Grid2>
                         </StyledBox>
                         <StyledBox>
-                            <StyledTypography>
-                            <Grid2 container justifyContent={"center"}> <h1>Front-End</h1></Grid2>  
-                                <h4>Desenvolvimento de designs responsivos e modernos, utlizando bibliotecas como React.JS, Material UI, Node.Js e outros.</h4>
-                            </StyledTypography>
+                            <Grid2 container justifyContent={"center"} >
+                                <Typography color="primary.contrastText" paddingBottom={"10px"} align="center" fontSize={"30px"}>
+                                    Back-End
+                                </Typography >
+                                <StyledTypography>
+                                    Desenvolvimento de APIs para a utilzação em processos de integração, usando como base linguagem C#, EntytiFramework e SQL
+                                </StyledTypography>
+                            </Grid2>
+                        </StyledBox>
+                        <StyledBox>
+                            <Grid2 container justifyContent={"center"} >
+                                <Typography color="primary.contrastText" paddingBottom={"10px"} align="center" fontSize={"30px"}>
+                                    Front-End
+                                </Typography>
+                                <StyledTypography>
+                                    Desenvolvimento de designs responsivos e modernos, utlizando bibliotecas como   React.JS, Material UI, Node.Js e outros.
+                                </StyledTypography>
+                            </Grid2>
                         </StyledBox>
                     </Grid2>
                 </Container>
             </StyledSkills>
-            
+
         </>
     )
 }

@@ -7,7 +7,7 @@ interface StyledTypographyProps {
 }
 const StyledTypography: React.FC<StyledTypographyProps> = ({ children }) => (
     <>
-        <Typography 
+        <Typography
             sx={{
                 color:"white",
                 transform: "translateY(20px)",

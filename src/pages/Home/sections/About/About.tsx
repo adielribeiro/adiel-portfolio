@@ -1,10 +1,7 @@
-
-import { Box, Container, Grid2, Typography, styled } from "@mui/material"
+import {  Container, Grid2, Typography, styled } from "@mui/material"
 import { FaGithub, FaInstagram, FaLinkedinIn } from "react-icons/fa"
 import { IconContext } from "react-icons";
-import Skills from "../Skills/Skills";
-import Projects from "../Projects/Projects";
-import Hero from "../Hero/Hero";
+
 
 const About = () => {
 

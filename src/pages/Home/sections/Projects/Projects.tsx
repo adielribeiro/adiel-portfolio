@@ -70,7 +70,7 @@ const Projects = () => {
 
                                 <Grid2 container justifyContent={"center"} >
                                     <Typography color="primary.contrastText" paddingBottom={"10px"} align="center">
-                                        <h1>Rick and Morty API</h1>
+                                        Rick and Morty API
                                     </Typography>
                                     <Typography color="primary.contrastText" paddingBottom={"10px"}>
                                         API     que    busca informações da animação Rick an Morty, ulizando    a rickandmortyapi.com e salvando em um banco de dados SQL.
@@ -91,15 +91,36 @@ const Projects = () => {
                                     filter: 'blur(0.1px)',
                                     borderRight:'20px'
                                 }} />
-
                                 <Grid2 container justifyContent={"center"} >
                                     <Typography color="primary.contrastText" paddingBottom={"10px"} align="center">
-                                        <h1>Ramal Digital</h1>
+                                        Ramal Digital
                                     </Typography>
                                     <Typography color="primary.contrastText" paddingBottom={"10px"} >
                                         Sistema que mostra uma lista com ramais, telefones e e-mails, também       é  possível editar e adicionar dados em um banco de dados SQL.
                                     </Typography>
                                     <StyledSkillsButton ><StyledA href="https://github.com/adielribeiro/RamalDigitalLaravel09">Ver Projeto</StyledA></StyledSkillsButton>
+                                </Grid2>
+                            </StyledBox>
+
+                            <StyledBox>
+
+                            <Grid2 height={"100%"} width={"100%"} container justifyContent={"center"} sx={{
+                                    backgroundImage: 'url(/src/assets/images/tecno.jpg)',
+                                    backgroundSize: 'cover',
+                                    backgroundPosition: 'center',
+                                    opacity: 0.5,
+                                    filter: 'blur(0.1px)',
+                                    borderRight:'20px'
+                                }} />
+
+                                <Grid2 container justifyContent={"center"} >
+                                    <Typography color="primary.contrastText" paddingBottom={"10px"} align="center">
+                                        My Portfolio
+                                    </Typography>
+                                    <Typography color="primary.contrastText" paddingBottom={"10px"} >
+                                        Uma Landing Page moderna para usar como portfólio, design "Mobile-First", usando as tecnologias: React, Material UI e TypeScrispt.
+                                    </Typography>
+                                    <StyledSkillsButton ><StyledA href="https://github.com/adielribeiro/my-portfolio">Ver Projeto</StyledA></StyledSkillsButton>
                                 </Grid2>
                             </StyledBox>
 
