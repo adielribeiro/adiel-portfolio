@@ -1,16 +1,9 @@
 import React, { useRef } from 'react';
 import emailjs from '@emailjs/browser';
 import './Contact.css';
-import { useNavigate } from 'react-router-dom';
 
-export const Contact = ({ handleCloseModal }) => {
+const Contact = ({ handleCloseModal }: { handleCloseModal: () => void }) => {
   const form = React.useRef() as React.MutableRefObject<HTMLFormElement>;
-
-  const navigate = useNavigate();
-
-  const handleClick = () => {
-    navigate('/hero')
-  };
 
   const sendEmail = (e: any) => {
     e.preventDefault();
@@ -23,6 +16,7 @@ export const Contact = ({ handleCloseModal }) => {
         () => {
           console.log('SUCCESS!');
           alert('Emial enviado com sucesso');
+          handleCloseModal();
 
         },
         (error) => {
@@ -40,7 +34,7 @@ export const Contact = ({ handleCloseModal }) => {
       <label>Message</label>
       <textarea name="message" />
       <div>
-        <input type="submit" value="Send" />
+        <input type="submit"  value="Send" />
         <input type='button' onClick={handleCloseModal} value="Cancel" />
       </div>
     </form>
