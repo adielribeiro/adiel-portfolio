@@ -38,7 +38,7 @@ const Skills = () => {
                             Minhas principais Skills!
                         </Typography>
                     </Grid2>
-                    <Grid2 container columns={{ xs: 3, md: 3 }} maxWidth={"1200px"} maxHeight={"100%"} flexWrap={"wrap"}>
+                    <Grid2 container columns={{ xs: 3, md: 3 }} maxWidth={"1200px"} maxHeight={"100%"} flexWrap={"wrap"} width={"1200px"}>
                         <StyledBox>
                             <Grid2 container justifyContent={"center"} >
                                 <Typography color="primary.contrastText" paddingBottom={"10px"} align="center" fontSize={"30px"}>
