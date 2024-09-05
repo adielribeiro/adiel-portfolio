@@ -60,7 +60,7 @@ const Projects = () => {
                         <Grid2 columns={{ xs: 2, md: 2 }} container display={"flex"} justifyContent={"center"} spacing={2}   >
                             <StyledBox >
                                 <Grid2 height={"100%"} width={"100%"} container justifyContent={"center"} sx={{
-                                    backgroundImage: 'url(/src/assets/images/bpm.png)',
+                                    backgroundImage: 'url(src/assets/images/bpm.png)',
                                     backgroundSize: 'cover',
                                     backgroundPosition: 'center',
                                     opacity: 0.5,
@@ -84,7 +84,7 @@ const Projects = () => {
                             <StyledBox>
 
                             <Grid2 height={"100%"} width={"100%"} container justifyContent={"center"} sx={{
-                                    backgroundImage: 'url(/src/assets/images/pc.jpg)',
+                                    backgroundImage: 'url(src/assets/images/pc.jpg)',
                                     backgroundSize: 'cover',
                                     backgroundPosition: 'center',
                                     opacity: 0.5,
@@ -105,7 +105,7 @@ const Projects = () => {
                             <StyledBox>
 
                             <Grid2 height={"100%"} width={"100%"} container justifyContent={"center"} sx={{
-                                    backgroundImage: 'url(/src/assets/images/tecno.jpg)',
+                                    backgroundImage: 'url(src/assets/images/tecno.jpg)',
                                     backgroundSize: 'cover',
                                     backgroundPosition: 'center',
                                     opacity: 0.5,
