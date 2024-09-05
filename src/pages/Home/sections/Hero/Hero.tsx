@@ -1,4 +1,4 @@
-import { Box,  Container, Grid2, styled, Typography } from "@mui/material"
+import { Box,  Container, Grid2, styled, TextField, Typography } from "@mui/material"
 import Avatar from "../../../../assets/images/avatar.jpg"
 import CloudDownloadIcon from '@mui/icons-material/CloudDownload';
 import MarkEmailReadIcon from '@mui/icons-material/MarkEmailRead';
@@ -9,12 +9,13 @@ import saveAs from "file-saver";
 import Modal from "../../../../components/Modal/Modal";
 import Contact from "../../../../components/Contact/Contact";
 import { useNavigate } from "react-router-dom";
+import doc from "../../../../assets/docs/Adiel_Ribeiro_CV.pdf"
 
 
 const Hero = () => {
 
   const [pdfUrl] = useState(
-    "/src/assets/docs/Adiel_Ribeiro_CV.pdf"
+    doc
   );
 
   const [isModalOpen, setIsModalOpen] = useState(false);
