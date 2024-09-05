@@ -1,5 +1,8 @@
-import {  Container, Grid2, styled, Typography } from "@mui/material"
+import { Container, Grid2, styled, Typography } from "@mui/material"
 import StyledBox from "../../../../components/StyledBox/StyledBox"
+import pc from "../../../../assets/images/pc.jpg"
+import bpm from "../../../../assets/images/bpm.png"
+import tecno from "../../../../assets/images/tecno.jpg"
 
 
 const Projects = () => {
@@ -39,15 +42,24 @@ const Projects = () => {
     const StyledA = styled("a")(() => ({
 
         textDecoration: "none",
-        color:"darkgrey"
+        color: "darkgrey"
 
+    }))
+
+    const StyledImageProjects = styled("img")(() => ({
+
+        width:"100%",
+        backgroundSize:"cover",
+        backgroundPosition:"center",
+        objectFit:"cover"
+       
     }))
 
 
 
     return (
         <>
-           
+
             <StyledProjects>
                 <Container>
                     <Grid2 container alignContent={"center"} >
@@ -59,14 +71,9 @@ const Projects = () => {
 
                         <Grid2 columns={{ xs: 2, md: 2 }} container display={"flex"} justifyContent={"center"} spacing={2}   >
                             <StyledBox >
-                                <Grid2 height={"100%"} width={"100%"} container justifyContent={"center"} sx={{
-                                    backgroundImage: 'url(src/assets/images/bpm.png)',
-                                    backgroundSize: 'cover',
-                                    backgroundPosition: 'center',
-                                    opacity: 0.5,
-                                    filter: 'blur(0.1px)'
-                                }} />
-
+                                <Grid2 height={"100%"} width={"100%"} container justifyContent={"center"} >
+                                    <StyledImageProjects src={pc}/>
+                                </Grid2>
 
                                 <Grid2 container justifyContent={"center"} >
                                     <Typography color="primary.contrastText" paddingBottom={"10px"} align="center">
@@ -83,15 +90,10 @@ const Projects = () => {
 
                             <StyledBox>
 
-                            <Grid2 height={"100%"} width={"100%"} container justifyContent={"center"} sx={{
-                                    backgroundImage: 'url(src/assets/images/pc.jpg)',
-                                    backgroundSize: 'cover',
-                                    backgroundPosition: 'center',
-                                    opacity: 0.5,
-                                    filter: 'blur(0.1px)',
-                                    borderRight:'20px'
-                                }} />
-                                <Grid2 container justifyContent={"center"} >
+                                <Grid2 height={"100%"} width={"100%"} container justifyContent={"center"} >
+                                     <StyledImageProjects src={bpm}/>
+                                </Grid2>
+                                <Grid2 container justifyContent={"center"} zIndex={0}>
                                     <Typography color="primary.contrastText" paddingBottom={"10px"} align="center">
                                         Ramal Digital
                                     </Typography>
@@ -104,14 +106,9 @@ const Projects = () => {
 
                             <StyledBox>
 
-                            <Grid2 height={"100%"} width={"100%"} container justifyContent={"center"} sx={{
-                                    backgroundImage: 'url(src/assets/images/tecno.jpg)',
-                                    backgroundSize: 'cover',
-                                    backgroundPosition: 'center',
-                                    opacity: 0.5,
-                                    filter: 'blur(0.1px)',
-                                    borderRight:'20px'
-                                }} />
+                                <Grid2 height={"100%"} width={"100%"} container justifyContent={"center"} >
+                                <StyledImageProjects src={tecno}/>
+                                </Grid2>
 
                                 <Grid2 container justifyContent={"center"} >
                                     <Typography color="primary.contrastText" paddingBottom={"10px"} align="center">
