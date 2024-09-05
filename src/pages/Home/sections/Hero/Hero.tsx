@@ -1,10 +1,10 @@
-import { Box, Button, Container, Grid2, styled, TextField, Typography } from "@mui/material"
+import { Box,  Container, Grid2, styled, Typography } from "@mui/material"
 import Avatar from "../../../../assets/images/avatar.jpg"
 import CloudDownloadIcon from '@mui/icons-material/CloudDownload';
 import MarkEmailReadIcon from '@mui/icons-material/MarkEmailRead';
 import StyledButton from "../../../../components/StyledButton/StyledButton";
 import { AnimatedBackground } from "../../../../components/AnimatedBackground/AnimatedBackground";
-import  { useState  }  from "react";
+import { useState } from "react";
 import saveAs from "file-saver";
 import Modal from "../../../../components/Modal/Modal";
 import Contact from "../../../../components/Contact/Contact";
@@ -16,10 +16,11 @@ const Hero = () => {
   const [pdfUrl] = useState(
     "/src/assets/docs/Adiel_Ribeiro_CV.pdf"
   );
-  const [isModalOpen, setIsModalOpen] = useState(false);  
+
+  const [isModalOpen, setIsModalOpen] = useState(false);
   const navigate = useNavigate();
 
- 
+
   const handleDownload = () => {
     fetch(pdfUrl)
       .then((response) => response.blob())
@@ -96,7 +97,7 @@ const Hero = () => {
 
                   <Grid2>
                     <Modal isOpen={isModalOpen}>
-                        <Contact handleCloseModal={handleCloseModal} />
+                      <Contact handleCloseModal={handleCloseModal} />
                     </Modal>
                   </Grid2>
                 </Grid2>
