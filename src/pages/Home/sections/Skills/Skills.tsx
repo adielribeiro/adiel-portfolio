@@ -40,8 +40,10 @@ const Skills = () => {
                         className="Skills"
                         container
                         columns={{ xs: 1, md: 3 }}
-                        maxWidth={"1200px"}
+                        maxWidth={"100vw"}
+                        width={"1500px"}
                         maxHeight={"100%"}
+                        
                     >
                         <StyledBox>
                             <Grid2 container justifyContent={"center"}>
