@@ -1,18 +1,32 @@
-import { BrowserRouter } from "react-router-dom"
-import Home from "./pages/Home/Home"
-import Footer from "./pages/Home/Footer/Footer"
+import { useState } from 'react'
+import { FiArrowUpRight, FiArrowDown, FiDownload, FiGithub, FiLinkedin, FiMail, FiMenu, FiX, FiCode, FiDatabase, FiGitMerge, FiMusic } from 'react-icons/fi'
+import { profile, projects, experience } from './data'
 
-
-const App = () => {
-
-
-  return (
-    <BrowserRouter>
-      <Home />
-      <Footer />
-    </BrowserRouter>
-   
-  )
+const tags = (values: string[]) => <ul className="tags">{values.map(v => <li key={v}>{v}</li>)}</ul>
+function App() {
+  const [menu, setMenu] = useState(false)
+  return <>
+    <a className="skip" href="#conteudo">Pular para o conteúdo</a>
+    <header className="header"><a className="brand" href="#inicio" aria-label="Adiel Ribeiro, início">ar<span>.</span><small>DESENVOLVEDOR</small></a>
+      <button className="menu-button" aria-label={menu ? 'Fechar menu' : 'Abrir menu'} aria-expanded={menu} aria-controls="navigation" onClick={() => setMenu(!menu)}>{menu ? <FiX /> : <FiMenu />}</button>
+      <nav id="navigation" className={menu ? 'open' : ''} aria-label="Principal">{[['sobre', 'Sobre'], ['projetos', 'Projetos'], ['experiencia', 'Experiência']].map(([id, label]) => <a key={id} href={`#${id}`} onClick={() => setMenu(false)}>{label}</a>)}<a className="nav-contact" href="#contato" onClick={() => setMenu(false)}>Vamos conversar <FiArrowUpRight /></a></nav>
+    </header>
+    <main id="conteudo">
+      <section id="inicio" className="hero section-shell">
+        <div className="hero-copy"><p className="eyebrow"><span className="tiny-line" /> BACK-END · INTEGRAÇÕES · AUTOMAÇÃO</p><h1>Conecto sistemas.<br />Transformo<br />ideias em <em>soluções.</em></h1><p className="hero-intro">Sou <strong>Adiel Ribeiro</strong>, desenvolvedor .NET.<br />Crio APIs, integro plataformas e automatizo processos para fazer a tecnologia trabalhar a favor do negócio.</p><div className="actions"><a className="button primary" href="#projetos">Explore meus projetos <FiArrowUpRight /></a><a className="button secondary" href={profile.cv} download><FiDownload /> Baixar currículo</a></div><div className="hero-links"><a href={profile.github} target="_blank" rel="noreferrer"><FiGithub /> GitHub <FiArrowUpRight /></a><a href={profile.linkedin} target="_blank" rel="noreferrer"><FiLinkedin /> LinkedIn <FiArrowUpRight /></a><span>Guapiaçu, SP · Brasil</span></div></div>
+        <aside className="hero-aside" aria-label="Perfil profissional"><div className="portrait-frame"><img src={`${import.meta.env.BASE_URL}adiel-perfil.jpg`} alt="Adiel Ribeiro" width="300" height="300" /><span className="portrait-caption">ADIEL RIBEIRO <span>/ .NET DEVELOPER</span></span></div><div className="focus-card"><div className="focus-heading"><FiCode /><span>MEU FOCO</span><span className="code-mark">&lt;/&gt;</span></div><p>Resolver o que está<br /><strong>entre os sistemas.</strong></p><div className="focus-tech"><span>C# / .NET</span><span>APIs</span><span>n8n</span></div></div></aside>
+        <div className="hero-bottom"><span>DA NECESSIDADE DO NEGÓCIO AO CÓDIGO EM PRODUÇÃO</span><a href="#sobre">Conheça minha trajetória <FiArrowDown /></a></div>
+      </section>
+      <div className="stack-strip" aria-label="Tecnologias principais"><span>C# / .NET</span><span>ASP.NET Core</span><span>SQL Server</span><span>SAP Business One</span><span>SoftExpert</span><span>n8n</span></div>
+      <section id="sobre" className="section-shell about section-space"><div><p className="eyebrow">01 / SOBRE MIM</p><h2>Antes de escrever código,<br /><span>eu entendo o processo.</span></h2></div><div className="about-copy"><p>Minha trajetória passa por suporte, infraestrutura e desenvolvimento. Essa visão de ponta a ponta me ajuda a entender tanto quem usa o sistema quanto o que precisa acontecer por trás dele.</p><p>No <strong>Grupo Essere</strong>, desenvolvo soluções para Kimberlit, Bionat e Loyder: APIs em C#/.NET, integrações com ERP e automações que conectam áreas, dados e pessoas.</p><p>Também construo projetos autorais para explorar produtos, experiências web e jogos. Fora do código, sou músico, toco bombardino e atuo como maestro — outra forma de fazer partes diferentes funcionarem juntas.</p><div className="about-foot"><span><FiMusic /> Música & tecnologia</span><span>Português · Inglês básico/técnico</span></div></div></section>
+      <section id="projetos" className="section-shell section-space"><div className="section-heading"><div><p className="eyebrow">02 / PROJETOS SELECIONADOS</p><h2>Problemas reais.<br /><span>Soluções construídas.</span></h2></div><p>Integrações corporativas e projetos autorais.<br />O contexto, as escolhas e o que foi construído.</p></div>
+        <div className="projects-grid">{projects.map((p, i) => <article key={p.id} className={`project project-${p.id}`}><div className="project-top"><span className="project-number">0{i + 1}</span><span className="project-category">{p.category}</span></div><p className="project-name">{p.name}</p><h3>{p.title}</h3><p className="project-description">{p.description}</p>{tags(p.stack)}<details><summary>Conheça o projeto <span>+</span></summary><div className="project-details"><h4>O desafio</h4><p>{p.problem}</p><h4>A solução</h4><p>{p.solution}</p><h4>Entrega e estágio</h4><p>{p.result}</p>{p.private && <p className="private-note">Projeto corporativo. Código e dados internos não são públicos.</p>}{p.url && <a className="text-link" href={p.url} target="_blank" rel="noreferrer">Ver código no GitHub <FiArrowUpRight /></a>}{p.extraUrl && <a className="text-link" href={p.extraUrl} target="_blank" rel="noreferrer">Ver repositório da API <FiArrowUpRight /></a>}</div></details><div className="project-status">{p.status}</div></article>)}</div>
+        <div className="more-projects"><span>Também no meu GitHub</span><a href="https://github.com/adielribeiro/RickAndMortyApi" target="_blank" rel="noreferrer">Rick and Morty API <FiArrowUpRight /></a><a href="https://github.com/adielribeiro/RamalDigitalLaravel09" target="_blank" rel="noreferrer">Ramal Digital <FiArrowUpRight /></a><a href="https://github.com/adielribeiro/chrono-pomodoro" target="_blank" rel="noreferrer">Chrono Pomodoro <FiArrowUpRight /></a><a href={profile.github} target="_blank" rel="noreferrer">Todos os repositórios <FiArrowUpRight /></a></div>
+      </section>
+      <section className="expertise-section"><div className="section-shell section-space"><p className="eyebrow">03 / TECNOLOGIAS</p><h2>As ferramentas mudam.<br /><span>O foco é resolver.</span></h2><div className="expertise-grid"><article><FiCode /><h3>Back-end & APIs</h3><p>Serviços e APIs para transformar regras de negócio em aplicações.</p>{tags(['C#', '.NET 6 / 8', 'ASP.NET Core', 'EF Core', 'ADO.NET', 'REST / SOAP'])}</article><article><FiGitMerge /><h3>Integração & automação</h3><p>Conexões entre ERP, workflows e processos corporativos.</p>{tags(['SAP Business One', 'Service Layer', 'SoftExpert', 'Sênior', 'n8n', 'ClickSign'])}</article><article><FiDatabase /><h3>Dados & interfaces</h3><p>Da consulta SQL à interface que torna a solução utilizável.</p>{tags(['SQL Server', 'MySQL', 'React', 'TypeScript', 'Node.js', 'Git / GitHub'])}</article></div><p className="learning"><span>EM APROFUNDAMENTO</span> SOLID · TDD · CQRS · Docker · Cloud · Mensageria</p></div></section>
+      <section id="experiencia" className="section-shell section-space experience"><div className="experience-intro"><p className="eyebrow">04 / TRAJETÓRIA</p><h2>Experiência que<br /><span>conecta os pontos.</span></h2><p>Uma base em operação de TI.<br />Uma atuação voltada ao desenvolvimento.</p><a className="text-link" href={profile.cv} download>Currículo completo <FiDownload /></a></div><div className="timeline">{experience.map(e => <article key={e.company}><p className="period">{e.period}</p><h3>{e.title}</h3><p className="company">{e.company}{e.detail && <span>{e.detail}</span>}</p><p>{e.text}</p>{tags(e.stack)}</article>)}</div></section>
+      <section id="contato" className="section-shell contact section-space"><p className="eyebrow">05 / PRÓXIMA CONEXÃO</p><h2>Tem um processo para melhorar<br />ou uma ideia para <em>construir?</em></h2><p>Vamos conversar sobre desenvolvimento back-end,<br />integrações ou um novo projeto.</p><a className="email-link" href={`mailto:${profile.email}`}>{profile.email}<FiArrowUpRight /></a><div className="contact-links"><a href={profile.linkedin} target="_blank" rel="noreferrer"><FiLinkedin /> LinkedIn</a><a href={profile.github} target="_blank" rel="noreferrer"><FiGithub /> GitHub</a><a href="https://wa.me/5517981686253" target="_blank" rel="noreferrer"><FiMail /> WhatsApp</a><a href={profile.cv} download><FiDownload /> Currículo em PDF</a></div></section>
+    </main><footer className="footer section-shell"><a className="brand" href="#inicio">ar<span>.</span></a><p>© {new Date().getFullYear()} Adiel Ribeiro · Feito com código e propósito.</p><a href="#inicio">Voltar ao topo ↑</a></footer>
+  </>
 }
-
 export default App

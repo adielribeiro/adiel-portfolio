@@ -5,7 +5,7 @@ import './Contact.css';
 const Contact = ({ handleCloseModal }: { handleCloseModal: () => void }) => {
   const form = React.useRef() as React.MutableRefObject<HTMLFormElement>;
 
-  const sendEmail = (e: any) => {
+  const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
     emailjs
