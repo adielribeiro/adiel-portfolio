@@ -1,19 +1,602 @@
 <!doctype html>
-<html lang="pt-BR">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#111214" />
-    <meta name="description" content="Adiel Ribeiro, desenvolvedor back-end .NET. APIs, integrações com SAP Business One e SoftExpert, automações com n8n e projetos autorais." />
-    <meta property="og:title" content="Adiel Ribeiro | Back-end .NET & Integrações" />
-    <meta property="og:description" content="Conecto sistemas. Transformo ideias em soluções. Conheça meus projetos e minha trajetória em desenvolvimento." />
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://adielribeiro.github.io/adiel-portfolio/" />
-    <link rel="canonical" href="https://adielribeiro.github.io/adiel-portfolio/" />
-    <link rel="icon" type="image/svg+xml" href="/adiel-portfolio/favicon.svg" />
-    <title>Adiel Ribeiro | Back-end .NET & Integrações</title>
-    <script type="module" crossorigin src="/adiel-portfolio/assets/index-fixed-20260921-v2.js"></script>
-    <link rel="stylesheet" crossorigin href="/adiel-portfolio/assets/index-fixed-20260921.css">
-  </head>
-  <body><div id="root"></div></body>
+<html lang="pt-BR" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Adiel Ribeiro — Desenvolvedor Back-end .NET &amp; Integrações</title>
+<meta name="description" content="Adiel Ribeiro, desenvolvedor back-end .NET em Guapiaçu, SP. APIs em C#, integrações com SAP Business One e SoftExpert, automações com n8n e projetos autorais.">
+<meta name="author" content="Adiel Ribeiro">
+<meta name="theme-color" content="#fbfaf8" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0a0a0c" media="(prefers-color-scheme: dark)">
+
+<meta property="og:type" content="website">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:site_name" content="Adiel Ribeiro">
+<meta property="og:title" content="Adiel Ribeiro — Desenvolvedor Back-end .NET &amp; Integrações">
+<meta property="og:description" content="Conecto sistemas. Transformo ideias em soluções. APIs em C#/.NET, integrações com ERP e automações de processos.">
+<meta property="og:url" content="https://adielribeiro.github.io/adiel-portfolio/">
+<meta property="og:image" content="https://adielribeiro.github.io/adiel-portfolio/assets/og.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Adiel Ribeiro — Desenvolvedor Back-end .NET">
+<meta name="twitter:description" content="APIs em C#/.NET, integrações com SAP Business One e automações com n8n.">
+<meta name="twitter:image" content="https://adielribeiro.github.io/adiel-portfolio/assets/og.jpg">
+
+<link rel="canonical" href="https://adielribeiro.github.io/adiel-portfolio/">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" href="assets/portrait-720.jpg" as="image" fetchpriority="high">
+<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600;700&family=Inter:wght@400;450;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/styles.css">
+<script>
+/* Set theme before paint to avoid a flash. */
+(function () {
+  try {
+    var s = localStorage.getItem('ar-theme');
+    if (s !== 'light' && s !== 'dark') {
+      s = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+    }
+    document.documentElement.setAttribute('data-theme', s);
+  } catch (e) {
+    document.documentElement.setAttribute('data-theme', 'light');
+  }
+})();
+</script>
+</head>
+
+<body>
+<a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+<div class="progress" aria-hidden="true"><span data-progress></span></div>
+
+<header class="header" data-header>
+  <div class="header__inner container">
+    <a class="brand" href="#inicio" aria-label="ar. — início">
+      <span class="brand__mark" aria-hidden="true">ar</span><span class="brand__dot" aria-hidden="true">.</span>
+    </a>
+
+    <nav class="nav" aria-label="Navegação principal">
+      <ul class="nav__list">
+        <li><a class="nav__link" href="#sobre" data-navlink>Sobre</a></li>
+        <li><a class="nav__link" href="#projetos" data-navlink>Projetos</a></li>
+        <li><a class="nav__link" href="#stack" data-navlink>Stack</a></li>
+        <li><a class="nav__link" href="#trajetoria" data-navlink>Trajetória</a></li>
+      </ul>
+    </nav>
+
+    <div class="header__actions">
+      <button class="icon-btn" type="button" data-theme-toggle aria-label="Alternar tema" aria-pressed="false">
+        <svg class="icon-btn__sun" viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true">
+          <circle cx="12" cy="12" r="4.2"/>
+          <path d="M12 2.4v2.2M12 19.4v2.2M4.2 12H2M22 12h-2.2M5.9 5.9 4.4 4.4M19.6 19.6l-1.5-1.5M18.1 5.9l1.5-1.5M4.4 19.6l1.5-1.5"/>
+        </svg>
+        <svg class="icon-btn__moon" viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M20 14.2A8.4 8.4 0 0 1 9.8 4 8.4 8.4 0 1 0 20 14.2Z"/>
+        </svg>
+      </button>
+      <a class="btn btn--sm btn--primary header__cta" href="#contato">Vamos conversar</a>
+      <button class="icon-btn burger" type="button" data-menu-toggle aria-label="Abrir menu" aria-expanded="false" aria-controls="menu-mobile">
+        <span aria-hidden="true"></span><span aria-hidden="true"></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<div class="menu" id="menu-mobile" data-menu hidden>
+  <nav class="menu__nav" aria-label="Navegação mobile">
+    <a href="#sobre" data-menu-link><span class="mono">01</span>Sobre</a>
+    <a href="#projetos" data-menu-link><span class="mono">02</span>Projetos</a>
+    <a href="#stack" data-menu-link><span class="mono">03</span>Stack</a>
+    <a href="#trajetoria" data-menu-link><span class="mono">04</span>Trajetória</a>
+    <a href="#contato" data-menu-link><span class="mono">05</span>Contato</a>
+  </nav>
+  <div class="menu__foot">
+    <a href="https://github.com/adielribeiro" target="_blank" rel="noopener noreferrer">GitHub</a>
+    <a href="https://www.linkedin.com/in/adiel-ribeiro-do-vale-junior-b5094574/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+    <a href="mailto:adiel.rv@gmail.com">adiel.rv@gmail.com</a>
+  </div>
+</div>
+
+<main id="conteudo">
+
+  <!-- ─────────────────────────────  HERO  ───────────────────────────── -->
+  <section class="hero" id="inicio">
+    <div class="hero__bg" aria-hidden="true">
+      <div class="hero__grid"></div>
+      <div class="hero__glow"></div>
+    </div>
+
+    <div class="container hero__inner">
+      <div class="hero__text">
+        <p class="eyebrow mono" data-reveal>
+          <span class="eyebrow__pip" aria-hidden="true"></span>
+          Back-end · Integrações · Automação
+        </p>
+
+        <h1 class="hero__title" data-reveal style="--d:.06s">
+          Conecto sistemas.<br>
+          <span class="hero__title-accent">Transformo ideias em soluções.</span>
+        </h1>
+
+        <p class="hero__lead" data-reveal style="--d:.12s">
+          Sou <strong>Adiel Ribeiro</strong>, desenvolvedor .NET. Crio APIs, integro plataformas
+          e automatizo processos para fazer a tecnologia trabalhar a favor do negócio.
+        </p>
+
+        <div class="hero__actions" data-reveal style="--d:.18s">
+          <a class="btn btn--primary" href="#projetos">
+            Explorar projetos
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </a>
+          <a class="btn btn--ghost" href="Curriculo_Adiel_Ribeiro_do_Vale_Junior.pdf" download>
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4v11M7.5 10.5 12 15l4.5-4.5M5 20h14"/></svg>
+            Baixar currículo
+          </a>
+        </div>
+
+        <ul class="hero__meta" data-reveal style="--d:.24s">
+          <li>
+            <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M12 21s7-5.7 7-11a7 7 0 1 0-14 0c0 5.3 7 11 7 11Z"/><circle cx="12" cy="10" r="2.5"/></svg>
+            Guapiaçu, SP · Brasil
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M12 2.5a9.5 9.5 0 1 0 0 19 9.5 9.5 0 0 0 0-19Z"/><path d="M3 12h18M12 2.5c2.4 2.6 3.7 6 3.7 9.5S14.4 18.9 12 21.5c-2.4-2.6-3.7-6-3.7-9.5S9.6 5.1 12 2.5Z"/></svg>
+            <a href="https://github.com/adielribeiro" target="_blank" rel="noopener noreferrer">GitHub</a>
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="M7.5 10.5v6M7.5 7.6v.1M12 16.5v-6M12 12.8c0-1.4 1-2.3 2.4-2.3s2.6.9 2.6 2.6v3.4"/></svg>
+            <a href="https://www.linkedin.com/in/adiel-ribeiro-do-vale-junior-b5094574/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+          </li>
+        </ul>
+      </div>
+
+      <figure class="portrait" data-reveal style="--d:.1s">
+        <div class="portrait__glow" aria-hidden="true"></div>
+        <div class="portrait__frame">
+          <img
+            id="portrait-img"
+            src="assets/portrait-720.jpg"
+            srcset="assets/portrait-720.jpg 720w, assets/portrait-1200.jpg 1200w"
+            sizes="(max-width: 860px) 78vw, 400px"
+            width="720" height="900"
+            alt="Retrato de Adiel Ribeiro, desenvolvedor back-end .NET"
+            fetchpriority="high" decoding="async"
+            style="background-image:url(data:image/jpeg;base64,/9j/4AAQSkZJRgABAQEAYABgAAD/2wBDABQODxIPDRQSERIXFhQYHzMhHxwcHz8tLyUzSkFOTUlBSEZSXHZkUldvWEZIZoxob3p9hIWET2ORm4+AmnaBhH//2wBDARYXFx8bHzwhITx/VEhUf39/f39/f39/f39/f39/f39/f39/f39/f39/f39/f39/f39/f39/f39/f3//wAARCAAYABgDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwCC2jeC7MxicBd5PBw3cUNNrCsZXiXywN3l8dPSqDSyxupzJlTkjJ/WtotAdkqxExhi4YvnrUzbRpCKkVb5N9xFKGVFCq+WGcdaKibU7V51Z4meNRtZPXrRUta7CWnUpX9yJblxCSIl+VeeoFQ/bDHZmAJmTccPngA/1oorVpbEJtFUMV74NFFFMR//2Q==)">
+        </div>
+
+        <figcaption class="portrait__card">
+          <span class="status" aria-hidden="true"></span>
+          <span class="portrait__card-txt">
+            <strong>Back-end .NET</strong>
+            Integrações &amp; automação
+          </span>
+        </figcaption>
+
+        <span class="portrait__badge mono" aria-hidden="true">&lt;/&gt;</span>
+      </figure>
+    </div>
+
+    <a class="scroll-cue" href="#sobre" aria-label="Scroll — próxima seção">
+      <span class="mono">scroll</span>
+      <span class="scroll-cue__line" aria-hidden="true"></span>
+    </a>
+  </section>
+
+  <!-- ─────────────────────────────  MARQUEE  ───────────────────────────── -->
+  <div class="marquee" aria-hidden="true">
+    <div class="marquee__track" data-marquee>
+      <ul class="marquee__group">
+        <li>C# / .NET</li><li>ASP.NET Core</li><li>SQL Server</li><li>SAP Business One</li>
+        <li>SoftExpert</li><li>n8n</li><li>React</li><li>TypeScript</li><li>Node.js</li>
+        <li>EF Core</li><li>REST / SOAP</li><li>Docker</li><li>Git</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- ─────────────────────────────  STATS  ───────────────────────────── -->
+  <section class="stats" aria-label="Resumo da trajetória">
+    <div class="container">
+      <ul class="stats__grid">
+        <li class="stat" data-reveal>
+          <span class="stat__value mono">2008</span>
+          <span class="stat__label">Início da trajetória em TI</span>
+        </li>
+        <li class="stat" data-reveal style="--d:.06s">
+          <span class="stat__value mono">+5</span>
+          <span class="stat__label">Anos em desenvolvimento</span>
+        </li>
+        <li class="stat" data-reveal style="--d:.12s">
+          <span class="stat__value mono">6</span>
+          <span class="stat__label">Projetos em destaque</span>
+        </li>
+        <li class="stat" data-reveal style="--d:.18s">
+          <span class="stat__value mono">3</span>
+          <span class="stat__label">Pilares: código, integração, automação</span>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ─────────────────────────────  SOBRE  ───────────────────────────── -->
+  <section class="section" id="sobre">
+    <div class="container">
+      <header class="sec-head">
+        <p class="sec-head__index mono" data-reveal>01 / Sobre mim</p>
+        <h2 class="sec-head__title" data-reveal style="--d:.06s">
+          Antes de escrever código,<br>eu entendo o processo.
+        </h2>
+      </header>
+
+      <div class="about">
+        <div class="about__body">
+          <p class="lead" data-reveal>
+            Minha trajetória passa por suporte, infraestrutura e desenvolvimento. Essa visão de
+            ponta a ponta me ajuda a entender tanto quem usa o sistema quanto o que precisa
+            acontecer por trás dele.
+          </p>
+          <p data-reveal style="--d:.06s">
+            Atuo com APIs em C#/.NET, integrações com ERP e automações que conectam áreas, dados e
+            pessoas — sempre buscando transformar processos de negócio em soluções mais simples
+            e eficientes.
+          </p>
+          <p data-reveal style="--d:.12s">
+            Também construo projetos autorais para explorar produtos, experiências web e jogos.
+            Fora do código, sou músico, toco bombardino e atuo como maestro: outra forma de fazer
+            partes diferentes funcionarem juntas.
+          </p>
+        </div>
+
+        <aside class="about__aside">
+          <div class="fact" data-reveal>
+            <span class="fact__k mono">Fora do código</span>
+            <p class="fact__v">Música &amp; tecnologia</p>
+            <p class="fact__d">Bombardino e regência — a mesma coordenação de partes que se vê em qualquer sistema bem desenhado.</p>
+          </div>
+          <div class="fact" data-reveal style="--d:.06s">
+            <span class="fact__k mono">Idiomas</span>
+            <p class="fact__v">Português · Inglês básico/técnico</p>
+          </div>
+          <div class="fact" data-reveal style="--d:.12s">
+            <span class="fact__k mono">Onde estou</span>
+            <p class="fact__v">Guapiaçu, São Paulo</p>
+            <p class="fact__d">BRT · UTC−03:00</p>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─────────────────────────────  PROJETOS  ───────────────────────────── -->
+  <section class="section" id="projetos">
+    <div class="container">
+      <header class="sec-head sec-head--row">
+        <div>
+          <p class="sec-head__index mono" data-reveal>02 / Projetos selecionados</p>
+          <h2 class="sec-head__title" data-reveal style="--d:.06s">
+            Problemas reais.<br>Soluções construídas.
+          </h2>
+        </div>
+        <p class="sec-head__note" data-reveal style="--d:.12s">
+          Integrações corporativas e projetos autorais — o contexto, as escolhas
+          e o que foi construído.
+        </p>
+      </header>
+
+      <div class="projects">
+
+        <article class="project" data-reveal>
+          <span class="project__index mono">01</span>
+          <span class="tag">Corporativo</span>
+          <h3 class="project__title">Automação de RFQ</h3>
+          <p class="project__tagline">Compras conectadas, do início ao fim.</p>
+          <p class="project__desc">Um fluxo de cotação que conecta compradores, fornecedores e o SAP Business One.</p>
+          <ul class="chips">
+            <li class="chip">n8n</li><li class="chip">SAP B1</li><li class="chip">Service Layer</li><li class="chip">JavaScript</li>
+          </ul>
+          <p class="project__note">Projeto privado</p>
+        </article>
+
+        <article class="project" data-reveal style="--d:.05s">
+          <span class="project__index mono">02</span>
+          <span class="tag">Corporativo</span>
+          <h3 class="project__title">Envio de duplicatas</h3>
+          <p class="project__tagline">Documentos financeiros em movimento.</p>
+          <p class="project__desc">Integração de documentos, assinatura digital e notificações ao cliente.</p>
+          <ul class="chips">
+            <li class="chip">C#</li><li class="chip">.NET</li><li class="chip">SQL Server</li><li class="chip">SOAP</li>
+          </ul>
+          <p class="project__note">Projeto privado</p>
+        </article>
+
+        <article class="project" data-reveal style="--d:.1s">
+          <span class="project__index mono">03</span>
+          <span class="tag">Corporativo</span>
+          <h3 class="project__title">SAPCurrencyRate.API</h3>
+          <p class="project__tagline">Cotações integradas ao ERP.</p>
+          <p class="project__desc">Serviço de atualização cambial com dados PTAX do Banco Central.</p>
+          <ul class="chips">
+            <li class="chip">.NET 6</li><li class="chip">SAP B1</li><li class="chip">API BCB</li>
+          </ul>
+          <p class="project__note">Projeto privado</p>
+        </article>
+
+        <article class="project" data-reveal style="--d:.15s">
+          <span class="project__index mono">04</span>
+          <span class="tag tag--own">Autoral</span>
+          <h3 class="project__title">Orça Feito</h3>
+          <p class="project__tagline">Da proposta ao próximo negócio.</p>
+          <p class="project__desc">Produto para criar e organizar orçamentos comerciais.</p>
+          <ul class="chips">
+            <li class="chip">React</li><li class="chip">API</li><li class="chip">Pagamentos</li>
+          </ul>
+          <p class="project__links">
+            <a class="link-arrow" href="https://github.com/adielribeiro/gerador-orcamentos" target="_blank" rel="noopener noreferrer">App
+              <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg>
+            </a>
+            <a class="link-arrow" href="https://github.com/adielribeiro/orcamentos-api" target="_blank" rel="noopener noreferrer">API
+              <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg>
+            </a>
+          </p>
+        </article>
+
+        <article class="project project--linked" data-reveal style="--d:.2s">
+          <span class="project__index mono">05</span>
+          <span class="tag tag--own">Autoral</span>
+          <h3 class="project__title">Sequência</h3>
+          <p class="project__tagline">Uma boa jogada acontece em tempo real.</p>
+          <p class="project__desc">Jogo de cartas multiplayer com regras e estado controlados pelo servidor.</p>
+          <ul class="chips">
+            <li class="chip">React</li><li class="chip">Node.js</li><li class="chip">Socket.IO</li>
+          </ul>
+          <p class="project__links"><span class="link-arrow" aria-hidden="true">Repositório
+            <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M9 7h8v8"/></svg>
+          </span></p>
+          <a class="project__overlay" href="https://github.com/adielribeiro/sequencia-card-game" target="_blank" rel="noopener noreferrer" aria-label="Ver o reposório do projeto Sequência no GitHub"></a>
+        </article>
+
+        <article class="project" data-reveal style="--d:.25s">
+          <span class="project__index mono">06</span>
+          <span class="tag tag--own">Autoral</span>
+          <h3 class="project__title">Partitura Web</h3>
+          <p class="project__tagline">Código a serviço da música.</p>
+          <p class="project__desc">Editor de partituras que aproxima minha experiência com música e desenvolvimento.</p>
+          <ul class="chips">
+            <li class="chip">React</li><li class="chip">.NET 8</li><li class="chip">PDF</li>
+          </ul>
+          <p class="project__note">Projeto pessoal</p>
+        </article>
+
+      </div>
+
+      <div class="repos" data-reveal>
+        <p class="repos__label mono">Também no meu GitHub</p>
+        <ul class="repos__list">
+          <li><a href="https://github.com/adielribeiro/RickAndMortyApi" target="_blank" rel="noopener noreferrer">Rick and Morty API</a></li>
+          <li><a href="https://github.com/adielribeiro/RamalDigitalLaravel09" target="_blank" rel="noopener noreferrer">Ramal Digital</a></li>
+          <li><a href="https://github.com/adielribeiro/chrono-pomodoro" target="_blank" rel="noopener noreferrer">Chrono Pomodoro</a></li>
+          <li class="repos__all"><a href="https://github.com/adielribeiro" target="_blank" rel="noopener noreferrer">
+            Todos os repositórios
+            <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </a></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─────────────────────────────  STACK  ───────────────────────────── -->
+  <section class="section section--alt" id="stack">
+    <div class="container">
+      <header class="sec-head">
+        <p class="sec-head__index mono" data-reveal>03 / Tecnologias</p>
+        <h2 class="sec-head__title" data-reveal style="--d:.06s">
+          As ferramentas mudam.<br>O foco é resolver.
+        </h2>
+      </header>
+
+      <div class="stack">
+        <div class="stack__col" data-reveal>
+          <h3 class="stack__title">Back-end &amp; APIs</h3>
+          <p class="stack__desc">Serviços e APIs para transformar regras de negócio em aplicações.</p>
+          <ul class="stack__list">
+            <li><span class="mono">01</span>C# / .NET</li>
+            <li><span class="mono">02</span>.NET 6 / 8</li>
+            <li><span class="mono">03</span>ASP.NET Core</li>
+            <li><span class="mono">04</span>EF Core</li>
+            <li><span class="mono">05</span>ADO.NET</li>
+            <li><span class="mono">06</span>REST / SOAP</li>
+          </ul>
+        </div>
+
+        <div class="stack__col" data-reveal style="--d:.07s">
+          <h3 class="stack__title">Integração &amp; automação</h3>
+          <p class="stack__desc">Conexões entre ERP, workflows e processos corporativos.</p>
+          <ul class="stack__list">
+            <li><span class="mono">01</span>SAP Business One</li>
+            <li><span class="mono">02</span>Service Layer</li>
+            <li><span class="mono">03</span>SoftExpert</li>
+            <li><span class="mono">04</span>Sênior</li>
+            <li><span class="mono">05</span>n8n</li>
+            <li><span class="mono">06</span>ClickSign</li>
+          </ul>
+        </div>
+
+        <div class="stack__col" data-reveal style="--d:.14s">
+          <h3 class="stack__title">Dados &amp; interfaces</h3>
+          <p class="stack__desc">Da consulta SQL à interface que torna a solução utilizável.</p>
+          <ul class="stack__list">
+            <li><span class="mono">01</span>SQL Server</li>
+            <li><span class="mono">02</span>MySQL</li>
+            <li><span class="mono">03</span>React</li>
+            <li><span class="mono">04</span>TypeScript</li>
+            <li><span class="mono">05</span>Node.js</li>
+            <li><span class="mono">06</span>Git / GitHub</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="learning" data-reveal>
+        <span class="learning__label mono">Em aprofundamento</span>
+        <ul class="chips chips--lg">
+          <li class="chip">SOLID</li><li class="chip">TDD</li><li class="chip">CQRS</li>
+          <li class="chip">Docker</li><li class="chip">Cloud</li><li class="chip">Mensageria</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─────────────────────────────  TRAJETÓRIA  ───────────────────────────── -->
+  <section class="section" id="trajetoria">
+    <div class="container">
+      <header class="sec-head sec-head--row">
+        <div>
+          <p class="sec-head__index mono" data-reveal>04 / Trajetória</p>
+          <h2 class="sec-head__title" data-reveal style="--d:.06s">
+            Experiência que<br>conecta os pontos.
+          </h2>
+        </div>
+        <p class="sec-head__note" data-reveal style="--d:.12s">
+          Uma base em operação de TI. Uma atuação voltada ao desenvolvimento.
+          <br>
+          <a class="link-arrow" href="Curriculo_Adiel_Ribeiro_do_Vale_Junior.pdf" download>Currículo completo
+            <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v13M7.5 12.5 12 17l4.5-4.5M5 20h14"/></svg>
+          </a>
+        </p>
+      </header>
+
+      <ol class="tl">
+        <li class="tl__item" data-reveal>
+          <div class="tl__meta mono">2021 — atual</div>
+          <div class="tl__body">
+            <h3 class="tl__role">Desenvolvedor Back-end</h3>
+            <p class="tl__org">Grupo Essere <span>· Kimberlit · Bionat · Loyder</span></p>
+            <p class="tl__desc">APIs e serviços em C#/.NET, integrações com SAP Business One, SoftExpert e Sênior. Automação de processos com n8n, workflows, formulários e assinatura digital. Do levantamento de requisitos à implantação.</p>
+            <ul class="chips">
+              <li class="chip">C# / .NET</li><li class="chip">SQL Server</li><li class="chip">SAP B1</li>
+              <li class="chip">SoftExpert</li><li class="chip">n8n</li>
+            </ul>
+          </div>
+        </li>
+
+        <li class="tl__item" data-reveal style="--d:.06s">
+          <div class="tl__meta mono">fev — jun 2021</div>
+          <div class="tl__body">
+            <h3 class="tl__role">Tecnologia da Informação</h3>
+            <p class="tl__org">ACIRP Rio Preto</p>
+            <p class="tl__desc">Suporte a usuários e sistemas, administração de acessos e desenvolvimento web com PHP, HTML e JavaScript.</p>
+            <ul class="chips">
+              <li class="chip">PHP</li><li class="chip">JavaScript</li><li class="chip">Git</li>
+            </ul>
+          </div>
+        </li>
+
+        <li class="tl__item" data-reveal style="--d:.12s">
+          <div class="tl__meta mono">2017 — 2020</div>
+          <div class="tl__body">
+            <h3 class="tl__role">Facilitador de TI</h3>
+            <p class="tl__org">Aurora Alimentos</p>
+            <p class="tl__desc">Infraestrutura, redes, telefonia e suporte à operação. Controle de ativos de software e atendimento aos usuários.</p>
+            <ul class="chips">
+              <li class="chip">Infraestrutura</li><li class="chip">Redes</li><li class="chip">Suporte</li>
+            </ul>
+          </div>
+        </li>
+
+        <li class="tl__item" data-reveal style="--d:.18s">
+          <div class="tl__meta mono">2015 — 2017</div>
+          <div class="tl__body">
+            <h3 class="tl__role">Técnico em Informática</h3>
+            <p class="tl__org">Rework</p>
+            <p class="tl__desc">Suporte técnico, manutenção de impressoras, infraestrutura e redes.</p>
+          </div>
+        </li>
+
+        <li class="tl__item" data-reveal style="--d:.24s">
+          <div class="tl__meta mono">2008 — 2015</div>
+          <div class="tl__body">
+            <h3 class="tl__role">Assistente de TI</h3>
+            <p class="tl__org">Móveis Província</p>
+            <p class="tl__desc">Manutenção de computadores, servidores Linux e Windows e apoio à implantação do SAP Business One.</p>
+            <ul class="chips">
+              <li class="chip">Linux</li><li class="chip">Windows</li><li class="chip">SAP B1</li>
+            </ul>
+          </div>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- ─────────────────────────────  CONTATO  ───────────────────────────── -->
+  <section class="section contact-wrap" id="contato">
+    <div class="container">
+      <div class="contact" data-reveal>
+        <p class="sec-head__index mono">05 / Próxima conexão</p>
+        <h2 class="contact__title">
+          Tem um processo para melhorar<br>ou uma ideia para construir?
+        </h2>
+        <p class="contact__lead">
+          Vamos conversar sobre desenvolvimento back-end, integrações ou um novo projeto.
+        </p>
+
+        <div class="contact__mail">
+          <a class="mail" href="mailto:adiel.rv@gmail.com" data-mail>
+            <span class="mail__text">adiel.rv@gmail.com</span>
+            <span class="mail__swap" aria-hidden="true">Enviar e-mail</span>
+          </a>
+          <button class="icon-btn icon-btn--copy" type="button" data-copy="adiel.rv@gmail.com" aria-label="Copiar endereço de e-mail">
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><rect x="9" y="9" width="11" height="11" rx="2.5"/><path d="M6 15H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v1"/></svg>
+          </button>
+        </div>
+
+        <ul class="contact__links">
+          <li>
+            <a href="https://www.linkedin.com/in/adiel-ribeiro-do-vale-junior-b5094574/" target="_blank" rel="noopener noreferrer">
+              <span class="contact__links-k mono">01</span>
+              <span class="contact__links-v">LinkedIn</span>
+              <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg>
+            </a>
+          </li>
+          <li>
+            <a href="https://github.com/adielribeiro" target="_blank" rel="noopener noreferrer">
+              <span class="contact__links-k mono">02</span>
+              <span class="contact__links-v">GitHub</span>
+              <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg>
+            </a>
+          </li>
+          <li>
+            <a href="https://wa.me/5517981686253" target="_blank" rel="noopener noreferrer">
+              <span class="contact__links-k mono">03</span>
+              <span class="contact__links-v">WhatsApp</span>
+              <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg>
+            </a>
+          </li>
+          <li>
+            <a href="Curriculo_Adiel_Ribeiro_do_Vale_Junior.pdf" download>
+              <span class="contact__links-k mono">04</span>
+              <span class="contact__links-v">Currículo em PDF</span>
+              <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v13M7.5 12.5 12 17l4.5-4.5M5 20h14"/></svg>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="container footer__inner">
+    <a class="brand" href="#inicio" aria-label="ar. — voltar ao início">
+      <span class="brand__mark" aria-hidden="true">ar</span><span class="brand__dot" aria-hidden="true">.</span>
+    </a>
+    <p class="footer__copy">© <span data-year>2026</span> Adiel Ribeiro · Feito com código e propósito.</p>
+    <a class="footer__top" href="#inicio" data-backtop>
+      Voltar ao topo
+      <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 19V6M6 11l6-6 6 6"/></svg>
+    </a>
+  </div>
+</footer>
+
+<div class="toast" data-toast role="status" aria-live="polite"></div>
+
+<script src="assets/main.js" defer></script>
+</body>
 </html>
